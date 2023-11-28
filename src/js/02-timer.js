@@ -59,10 +59,10 @@ startButton.addEventListener('click', () => {
       clearInterval(intervalRun);
     } else {
       timeToCount = convertMs(ms);
-      const daysNumber = timeToCount.days;
-      const hoursNumber = timeToCount.hours;
-      const minutesNumber = timeToCount.minutes;
-      const secondsNumber = timeToCount.seconds;
+      let daysNumber = timeToCount.days;
+      let hoursNumber = timeToCount.hours;
+      let minutesNumber = timeToCount.minutes;
+      let secondsNumber = timeToCount.seconds;
       addLeadingZero(daysNumber, daysField);
       addLeadingZero(hoursNumber, hoursField);
       addLeadingZero(minutesNumber, minutesField);
