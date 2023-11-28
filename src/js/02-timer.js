@@ -24,7 +24,7 @@ flatpickr('input#datetime-picker', {
       window.alert('Please choose a date in the future');
     } else {
       startButton.removeAttribute('disabled');
-      dateSelectedInFlatpickr = selectedDates[0].getTime();
+      return (dateSelectedInFlatpickr = selectedDates[0].getTime());
     }
   },
 });

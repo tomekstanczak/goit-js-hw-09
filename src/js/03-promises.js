@@ -2,7 +2,6 @@ const createPromisesButton = document.querySelector('button[type="submit"]');
 const delayField = document.querySelector('input[name="delay"]');
 const stepField = document.querySelector('input[name="step"]');
 const amountField = document.querySelector('input[name="amount"]');
-const informationContainer = [];
 
 function createPromise(position, delay) {
   return new Promise((resolve, reject) => {
@@ -19,6 +18,7 @@ function createPromise(position, delay) {
 
 const startPromis = function (event) {
   event.preventDefault();
+  const informationContainer = [];
   for (let i = 0; i < amountField.value; i++) {
     const delayValue = Number(delayField.value) + i * Number(stepField.value);
     informationContainer.push(createPromise(i, delayValue));
