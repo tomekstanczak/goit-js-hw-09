@@ -1,4 +1,4 @@
-const createPromisesButton = document.querySelector('button[type="submit"]');
+const createPromiseButton = document.querySelector('button[type="submit"]');
 const delayField = document.querySelector('input[name="delay"]');
 const stepField = document.querySelector('input[name="step"]');
 const amountField = document.querySelector('input[name="amount"]');
@@ -16,7 +16,7 @@ function createPromise(position, delay) {
   });
 }
 
-const startPromis = function (event) {
+const startPromise = function (event) {
   event.preventDefault();
   const informationContainer = [];
   for (let i = 0; i < amountField.value; i++) {
@@ -33,4 +33,4 @@ const startPromis = function (event) {
   }
 };
 
-createPromisesButton.addEventListener('click', startPromis);
+createPromiseButton.addEventListener('click', startPromise);
