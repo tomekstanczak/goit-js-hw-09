@@ -54,7 +54,7 @@ console.log(convertMs(24140000)); // {days: 0, hours: 6 minutes: 42, seconds: 20
 startButton.addEventListener('click', () => {
   intervalRun = setInterval(() => {
     const currentTime = new Date().getTime();
-    ms = dateSelectedInFlatpickr - currentTime;
+    let ms = dateSelectedInFlatpickr - currentTime;
     if (ms <= 0) {
       clearInterval(intervalRun);
     } else {
