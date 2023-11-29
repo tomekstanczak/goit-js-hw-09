@@ -1,6 +1,6 @@
 import { Notify } from 'notiflix/build/notiflix-notify-aio';
 
-const createPromiseButton = document.querySelector('form');
+const form = document.querySelector('.form');
 const delayField = document.querySelector('input[name="delay"]');
 const stepField = document.querySelector('input[name="step"]');
 const amountField = document.querySelector('input[name="amount"]');
@@ -22,7 +22,7 @@ function createPromise(position, delay) {
   });
 }
 
-const startPromise = function (event) {
+form.addEventListener('submit', event => {
   event.preventDefault();
   const informationContainer = [];
 
@@ -42,6 +42,4 @@ const startPromise = function (event) {
         console.log(`❌ Rejected promise ${position + 1} in ${delay}ms`);
       });
   }
-};
-
-createPromiseButton.addEventListener('submit', startPromise);
+});
